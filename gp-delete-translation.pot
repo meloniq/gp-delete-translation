@@ -1,8 +1,8 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: GP Remove Translation\n"
-"POT-Creation-Date: 2025-11-08 12:41+0100\n"
+"Project-Id-Version: GP Delete Translation\n"
+"POT-Creation-Date: 2025-11-08 13:09+0100\n"
 "PO-Revision-Date: 2025-11-03 11:59+0100\n"
 "Last-Translator: MELONIQ.NET\n"
 "Language-Team: MELONIQ.NET\n"
@@ -39,18 +39,18 @@ msgid "Translation not found."
 msgstr ""
 
 #: src/class-ajax.php:49
-msgid "Translation removed successfully."
+msgid "Translation deleted successfully."
 msgstr ""
 
-#: template/remove-translation-button.php:12
-msgid "Remove this translation permanently."
+#: template/delete-translation-button.php:12
+msgid "Delete this translation permanently."
 msgstr ""
 
-#: template/remove-translation-button.php:15
+#: template/delete-translation-button.php:15
 msgid "Action:"
 msgstr ""
 
-#: template/remove-translation-button.php:25
+#: template/delete-translation-button.php:25
 msgctxt "Action"
-msgid "Remove"
+msgid "Delete"
 msgstr ""

@@ -1,25 +1,25 @@
-/* global $gprts_editor_options, $gp, wp */
+/* global $gpdts_editor_options, $gp, wp */
 /* eslint camelcase: "off" */
-var $gprts = $gprts || {};
-$gprts.editor = (
+var $gpdts = $gpdts || {};
+$gpdts.editor = (
 	function ($) {
 		return {
 			table: null,
 			init: function (table) {
-				$gprts.editor.table = table;
-				$gprts.editor.install_hooks();
+				$gpdts.editor.table = table;
+				$gpdts.editor.install_hooks();
 			},
 			install_hooks: function () {
-				$($gprts.editor.table).on('click', 'button.remove', $gprts.editor.hooks.remove_translation);
+				$($gpdts.editor.table).on('click', 'button.delete', $gpdts.editor.hooks.delete_translation);
 			},
-			remove_translation: function (button) {
+			delete_translation: function (button) {
 				var data;
 
 				button.prop('disabled', true);
 				$gp.notices.notice(wp.i18n.__('Removing translation...', 'glotpress'));
 
 				data = {
-					action: 'gprts_remove_translation',
+					action: 'gpdts_delete_translation',
 					translation_id: button.data('id'),
 					original_id: button.data('original_id'),
 					nonce: button.data('nonce'),
@@ -27,11 +27,11 @@ $gprts.editor = (
 
 				$.ajax({
 					type: 'POST',
-					url: $gprts_editor_options.ajax_url,
+					url: $gpdts_editor_options.ajax_url,
 					data: data,
 					success: function (response) {
 						$gp.notices.success(response.data.message);
-						// remove editor and preview rows
+						// delete editor and preview rows
 						$('#preview-' + button.data('original_id') + '-' + button.data('id')).remove();
 						$('#editor-' + button.data('original_id') + '-' + button.data('id')).remove();
 					},
@@ -43,8 +43,8 @@ $gprts.editor = (
 				});
 			},
 			hooks: {
-				remove_translation: function () {
-					$gprts.editor.remove_translation($(this));
+				delete_translation: function () {
+					$gpdts.editor.delete_translation($(this));
 					return false;
 				},
 			},
@@ -53,5 +53,5 @@ $gprts.editor = (
 );
 
 jQuery(function ($) {
-	$gprts.editor.init($('#translations'));
+	$gpdts.editor.init($('#translations'));
 });

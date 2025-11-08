@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<ruleset name="GP Remove Translation">
-	<description>GP Remove Translation rules for PHP_CodeSniffer</description>
+<ruleset name="GP Delete Translation">
+	<description>GP Delete Translation rules for PHP_CodeSniffer</description>
 
 	<rule ref="WordPress">
 	</rule>
