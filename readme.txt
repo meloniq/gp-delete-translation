@@ -18,6 +18,8 @@ This plugin adds a button to the translation editor interface that allows users 
 
 Once you have installed GP Delete Translation it is ready to use.
 
+== Screenshots ==
+1. The "Delete Translation" button.
 
 == Changelog ==
 
