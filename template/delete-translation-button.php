@@ -5,6 +5,11 @@
  * @package Meloniq\GpDeleteTranslation
  */
 
+// If this file is accessed directly, then abort.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 $translation_id = isset( $translation->id ) ? $translation->id : 0;
 $original_id    = isset( $translation->original_id ) ? $translation->original_id : 0;
 
