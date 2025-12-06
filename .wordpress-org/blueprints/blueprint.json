@@ -1,0 +1,23 @@
+{
+    "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+    "login": true,
+    "siteOptions": {
+        "blogname": "GP Delete Translation"
+    },
+    "landingPage": "/projects/",
+    "steps": [
+        {
+            "step": "defineWpConfigConsts",
+            "consts": {
+                "GP_URL_BASE": "/"
+            }
+        },
+        {
+            "step": "installPlugin",
+            "pluginData": {
+                "resource": "wordpress.org/plugins",
+                "slug": "glotpress"
+            }
+        }
+    ]
+}
